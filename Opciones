@@ -1,0 +1,30 @@
+from Funciones import *
+
+def asignar_sueldos_aleatorios():
+    sueldos = generar_sueldos_aleatorios()
+    print("\nSueldos asignados aleatoriamente:")
+    for i, trabajador in enumerate(trabajadores):
+        print(f"{trabajador}: ${sueldos[i]}")    
+
+def main():
+    while True:
+        mostrar_menu()
+        opcion = input("Seleccione una opción de menu: ")
+        if opcion == "1":
+            asignar_sueldos_aleatorios()
+        elif opcion == "2":
+            clasificar_sueldos()
+            pass
+        elif opcion == "3":
+            ver_estadisticas_sueldos()
+            pass
+        elif opcion == "4":
+            reporte_sueldos()
+            pass
+        elif opcion == "5":
+            print("Programa Finalizado.")
+            break
+        else:
+            print("Opción inválida. Por favor, seleccione una opción válida entre 1 y 5.")
+if __name__ == "__main__":
+     main()
